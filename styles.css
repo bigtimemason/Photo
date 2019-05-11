@@ -5,7 +5,8 @@ font-family: 'Baloo Bhai', cursive;
   padding: 15px;
 }
 
-body {
-  padding: 20px;
+[contenteditable="true"] {
+  font-family: "Rajdhani";
+  color: #C00;
 }
 
