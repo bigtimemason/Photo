@@ -1,6 +1,3 @@
-var theContent = $('#content2');
- 
-$('#save').on('click', function(){
-  var editedContent   = theContent.html();
-  localStorage.newContent = editedContent;
-});
+document.getElementById("editor").addEventListener("input", function() {
+    document.getElementById("log").value += "input event fired\n";
+}, false);
