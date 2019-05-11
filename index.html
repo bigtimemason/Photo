@@ -72,6 +72,11 @@
      <button id="save">Save Changes</button>
   </div>
 </div>
-
+var theContent = $('#content2');
+ 
+$('#save').on('click', function(){
+  var editedContent   = theContent.html();
+  localStorage.newContent = editedContent;
+});
 </body>
 </html>
