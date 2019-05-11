@@ -64,43 +64,7 @@
   </div>
   
   
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-(function() {
-    var content = $('.content'),
-          edit = $('.edit');
-          edit.attr('contenteditable', 'true');
-          content.append('<button>Save</button>');
 
-    $('button').on('click', function() {
-        var siblings = $(this).siblings(),
-              content1 = $(siblings[1]).html(),
-              content2 = $(siblings[2]).html(),
-              dataString = 'content1=' + content1 + '&content2=' + content2;
-
-        $.ajax({
-            type: 'post',
-            url: 'update.php',
-            data: dataString
-        });
-
-    });
-})();
-  </script>
-</head>
-<body
-<div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-          tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p class="edit">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-          fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat.</p>
-    <p class="edit">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-          deserunt mollit anim id est laborum.</p>
-</div>
-      </body>
   
   
 </div>
