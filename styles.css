@@ -1,6 +1,9 @@
 font-family: 'Baloo Bhai', cursive;
 
-
+.content {
+  border: 1px solid;
+  padding: 15px;
+}
 
 
 
