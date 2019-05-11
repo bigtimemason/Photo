@@ -74,9 +74,29 @@
 </div>
 var theContent = $('#content2');
  
-$('#save').on('click', function(){
-  var editedContent   = theContent.html();
-  localStorage.newContent = editedContent;
-});
+
+ Helo
+ </div>
+ <button id="save">Click to Save</button>
+ <script type="text/javascript">
+ $(document).ready(function(argument) {
+ $('#save').click(function(){
+ // Get edit field value
+ $edit = $('#editor').html();
+ $.ajax({
+ url: 'get.php',
+ type: 'post',
+ data: {data: $edit},
+ datatype: 'html',
+ success: function(rsp){
+ alert(rsp);
+ }
+ });
+ });
+ });
+ </script>
+ </body>
+</html>
+
 </body>
 </html>
