@@ -61,21 +61,7 @@
   Write your thoughts down. It's saved for next time...
 
 </div>
-  <button id="save">Save Changes</button>
-  </div>
-  <div class="column" style="background-color:#000000;">
-    <h2></h2>
-   <div contenteditable="true">
-  Write your fustration down. It's saved for next time...
-    
-</div>
-     <button id="save">Save Changes</button>
-  </div>
-</div>
-var theContent = $('#content2');
- 
-
- Helo
+   Helo
  </div>
  <button id="save">Click to Save</button>
  <script type="text/javascript">
@@ -97,6 +83,41 @@ var theContent = $('#content2');
  </script>
  </body>
 </html>
+  </div>
+  <div class="column" style="background-color:#000000;">
+    <h2></h2>
+   <div contenteditable="true">
+  Write your fustration down. It's saved for next time...
+    
+</div>
+      Helo
+ </div>
+ <button id="save">Click to Save</button>
+ <script type="text/javascript">
+ $(document).ready(function(argument) {
+ $('#save').click(function(){
+ // Get edit field value
+ $edit = $('#editor').html();
+ $.ajax({
+ url: 'get.php',
+ type: 'post',
+ data: {data: $edit},
+ datatype: 'html',
+ success: function(rsp){
+ alert(rsp);
+ }
+ });
+ });
+ });
+ </script>
+ </body>
+</html>
+  </div>
+</div>
+var theContent = $('#content2');
+ 
+
+
 
 </body>
 </html>
