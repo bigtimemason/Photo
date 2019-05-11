@@ -57,67 +57,37 @@
 <div class="row">
   <br><br><br><div class="column" style="background-color:#000000;">
    
-<div contenteditable="true">
-  Write your thoughts down. It's saved for next time...
+  
+<button id="editBtn" type="button">Edit</button>
+ 
+<div id="editor">
+    <h1 id="title">A Nice Heading.</h1>
+   
+    <p id="content">Type your fustrations. They are saved for next time...</p>
+</div>
 
 </div>
-   Helo
+ 
  </div>
- <button id="save">Click to Save</button>
- <script type="text/javascript">
- $(document).ready(function(argument) {
- $('#save').click(function(){
- // Get edit field value
- $edit = $('#editor').html();
- $.ajax({
- url: 'get.php',
- type: 'post',
- data: {data: $edit},
- datatype: 'html',
- success: function(rsp){
- alert(rsp);
- }
- });
- });
- });
- </script>
+
  </body>
 </html>
   </div>
   <div class="column" style="background-color:#000000;">
     <h2></h2>
-   <div contenteditable="true">
-  Write your fustration down. It's saved for next time...
+ <button id="editBtn" type="button">Edit</button>
+ 
+<div id="editor">
+    <h1 id="title">A Nice Heading.</h1>
+   
+    <p id="content">Type your feelings. They are saved for next time...</p>
+  
+</div>
+
     
 </div>
-      Helo
- </div>
- <button id="save">Click to Save</button>
- <script type="text/javascript">
- $(document).ready(function(argument) {
- $('#save').click(function(){
- // Get edit field value
- $edit = $('#editor').html();
- $.ajax({
- url: 'get.php',
- type: 'post',
- data: {data: $edit},
- datatype: 'html',
- success: function(rsp){
- alert(rsp);
- }
- });
- });
- });
- </script>
- </body>
-</html>
-  </div>
-</div>
-var theContent = $('#content2');
  
-
-
+ </div>
 
 </body>
 </html>
