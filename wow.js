@@ -30,7 +30,20 @@ editBtn.addEventListener('click', function(e) {
   }
 });
 
-
+if (typeof(Storage) !== "undefined") {
+ 
+  if (localStorage.getItem('title') !== null) {
+    editables[0].innerHTML = localStorage.getItem('title');
+  }
+   
+  if (localStorage.getItem('author') !== null) {
+    editables[1].innerHTML = localStorage.getItem('author');
+  }
+   
+  if (localStorage.getItem('content') !== null) {
+    editables[2].innerHTML = localStorage.getItem('content');
+  } 
+}
 
 
 
