@@ -45,7 +45,11 @@ if (typeof(Storage) !== "undefined") {
   } 
 }
 
-
+setInterval(function() {
+  for (var i = 0; i < editables.length; i++) {
+    localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
+  }
+}, 5000);
 
 
 
