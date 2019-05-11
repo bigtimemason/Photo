@@ -1,38 +1,34 @@
-document.addEventListener('keydown', function (event) {
-  var esc = event.which == 27,
-      nl = event.which == 13,
-      el = event.target,
-      input = el.nodeName != 'INPUT' && el.nodeName != 'TEXTAREA',
-      data = {};
 
-  if (input) {
-    if (esc) {
-      // restore state
-      document.execCommand('undo');
-      el.blur();
-    } else if (nl) {
-      // save
-      data[el.getAttribute('data-name')] = el.innerHTML;
 
-      // we could send an ajax request to update the field
-      /*
-      $.ajax({
-        url: window.location.toString(),
-        data: data,
-        type: 'post'
-      });
-      */
-      log(JSON.stringify(data));
 
-      el.blur();
-      event.preventDefault();
+
+
+
+
+var editBtn = document.getElementById('editBtn');
+var editables = document.querySelectorAll('#title, #author, #content')
+ 
+editBtn.addEventListener('click', function(e) {
+  if (!editables[0].isContentEditable) {
+    editables[0].contentEditable = 'true';
+    editables[1].contentEditable = 'true';
+    editables[2].contentEditable = 'true';
+    editBtn.innerHTML = 'Save Changes';
+    editBtn.style.backgroundColor = '#6F9';
+  } else {
+    // Disable Editing
+    editables[0].contentEditable = 'false';
+    editables[1].contentEditable = 'false';
+    editables[2].contentEditable = 'false';
+    // Change Button Text and Color
+    editBtn.innerHTML = 'Enable Editing';
+    editBtn.style.backgroundColor = '#F96';
+    // Save the data in localStorage 
+    for (var i = 0; i < editables.length; i++) {
+      localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
     }
   }
-}, true);
-
-function log(s) {
-  document.getElementById('debug').innerHTML = 'value changed to: ' + s;
-}
+});
 
 
 
@@ -45,50 +41,3 @@ function log(s) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('keydown', function (event) {
-  var esc = event.which == 27,
-      nl = event.which == 13,
-      el = event.target,
-      input = el.nodeName != 'INPUT' && el.nodeName != 'TEXTAREA',
-      data = {};
-
-  if (input) {
-    if (esc) {
-      // restore state
-      document.execCommand('undo');
-      el.blur();
-    } else if (nl) {
-      // save
-      data[el.getAttribute('data-name')] = el.innerHTML;
-
-      // we could send an ajax request to update the field
-      /*
-      $.ajax({
-        url: window.location.toString(),
-        data: data,
-        type: 'post'
-      });
-      */
-      log(JSON.stringify(data));
-
-      el.blur();
-      event.preventDefault();
-    }
-  }
-}, true);
-
-function log(s) {
-  document.getElementById('debug').innerHTML = 'value changed to: ' + s;
-}
