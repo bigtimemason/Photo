@@ -30,7 +30,7 @@ h2 {
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: #051F5C;
+  background-color: white;
   padding: 20px 10px;
 }
 
@@ -54,7 +54,7 @@ h2 {
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: #ddd;
+  background-color: #ffffff;
   color: white;
 }
 
