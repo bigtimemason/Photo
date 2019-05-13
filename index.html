@@ -93,50 +93,7 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
   
   
   
-  
-  
-  <div class="row">
-  <div class="column" style="background-color: white">
-    <font color="#52eaa8">
-      <font size="6">
-    <h2 align="center">Ramble On</h2>
-      <font color="#52eaa8">
 
-
-        
-         <!DOCTYPE html>
-<html>
- 
-<head>
-<script type="text/javascript">
-  function saveEdits() {
-
-//get the editable element
-var editElem = document.getElementById("edit");
-
-//get the edited element content
-var userVersion = editElem.innerHTML;
-
-//save the content to local storage
-localStorage.userEdits = userVersion;
-
-//write a confirmation to the user
-document.getElementById("update").innerHTML="Edits saved!";
-
-}
-function checkEdits() {
-
-//find out if the user has previously saved edits
-if(localStorage.userEdits!=null)
-document.getElementById("edit").innerHTML = localStorage.userEdits;
-}
-</script>
-</head>
-        
-        
-         <div class="column" style="background-color:white;">
-    <h2>Ramble On</h2>
-    <p>Go ahead. Ramble on. This isn't saved...</p>
   </div>
 </div>
 
