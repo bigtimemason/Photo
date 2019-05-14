@@ -1,23 +1,24 @@
-<body bgcolor="#4c4c4c"/>
+<font size="7" color="#52eaa8">
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Transparent Login Form</title>
-    <link rel="stylesheet" href="styles.css">
-   <body>
-<div class="login-box">
-    <h1>Login</h1>
-    <div class="textbox">
-        <i class="fas fa-users"></i>
-        <input type="text" placeholder="Username" name="" value="">
-</div>
 
+<script>
 
-<div class="textbox">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" name="" value="">
-    </div>
+function Login(form) { username = new Array("manneboina16"); password = new Array("password"); page = "editing" + ".html"; if (form.username.value == username[0] && form.password.value == password[0] || form.username.value == username[1] && form.password.value == password[1] ||
 
+form.username.value == username[2] && form.password.value == password[2] || form.username.value == username[3] && form.password.value == password[3] ||
 
-<input class="btn" type="button" name="" value="Sign in">
-   </body>
-</head>
+form.username.value == username[4] && form.password.value == password[4] || form.username.value == username[5] && form.password.value == password[5] ||
+
+form.username.value == username[6] && form.password.value == password[6] || form.username.value == username[7] && form.password.value == password[7] ||
+
+form.username.value == username[8] && form.password.value == password[8] || form.username.value == username[9] && form.password.value == password[9]) { self.location.href = page; } else { alert("Either the username or password you entered is incorrect.\nPlease try again."); form.username.focus(); } return true; }
+
+</script> </head> <body bgcolor="#eeeeee"> <form> <br> <center> <h5>Username: <input type="text" name="username" style="background:#bfbfbf;color:#212121;border-color:#212121;" onFocus="this.style.background = '#ffffff';"
+
+onBlur="this.style.background = '#bfbfbf';"> <br> Password: <input type="password" name="password" style="background:#bfbfbf;color:#212121;border-color:#212121;" onFocus="this.style.background = '#ffffff';"
+
+onBlur="this.style.background = '#bfbfbf';"> <br> <input type="button" value="Login" onClick="Login(this.form);" style="background:#bfbfbf;color:#000000;border-color:#212121;" onMouseOver="this.style.color =
+
+'#404040';" onMouseOut="this.style.color = '#000000';" onFocusr="this.style.color = '#404040';" onBlur="this.style.color = '#000000';"></h5> </center> </form> </body> </html>
