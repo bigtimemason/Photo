@@ -457,7 +457,7 @@ body{
 .textbox input{
     border: none;
     outline: none;
-    background: none;
+    background: black;
     color: #52eaa8;
     font-size: 18px;
     width: 80%;
