@@ -61,7 +61,7 @@ h2 {
 /* Style the active/current link*/
 .header a.active {
   background-color: dodgerblue;
-  color: white;
+  color: #52eaa8;
 }
 
 /* Float the link section to the right */
