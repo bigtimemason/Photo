@@ -424,7 +424,7 @@ body{
     font-family: sans-serif;
     background:  url(bob.jpg) no-repeat;
     background-size: cover;
-    background-color: #b2b2b2;
+    background-color: black;
 }
 .login-box{
    width: 280px;
