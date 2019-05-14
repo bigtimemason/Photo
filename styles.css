@@ -432,7 +432,7 @@ body{
    top: 50%;
    left: 50%;
    transform: translate(-50%,-50%);
-   color: white;
+   color: #52eaa8;
 }
 .login-box h1{
     float: left;
